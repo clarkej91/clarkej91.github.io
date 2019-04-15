@@ -1,0 +1,38 @@
+.generate {
+  height: 15em;
+  width: 10em;
+  text-align: center;
+  align-self: center;
+}
+.nba-logo {
+  height: 100%;
+  width: 100%;
+}
+ul {
+  list-style: none;
+}
+.player-picture {
+  display: flex;
+  flex-wrap: nowrap;
+  /* border: 5px black solid; */
+  height: 15em;
+  width: 20em;
+}
+img {
+  height: 100%;
+  width: 100%;
+}
+.next {
+  height: 5em;
+  width: 5em;
+  border-radius: 50%;
+  border: 5px black solid;
+  text-align: center;
+}
+.previous {
+  height: 5em;
+  width: 5em;
+  border-radius: 50%;
+  border: 5px black solid;
+  text-align: center;
+}
