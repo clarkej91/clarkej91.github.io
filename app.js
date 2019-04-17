@@ -19,27 +19,27 @@ const players = []
     $li.append(randomPlayers)
     $('.players').append($li)
 
-    if(randomPlayers == 'Ike Anigbogu'){
+    if(randomPlayers == 'Player: Ike Anigbogu'){
       $('.ike').show();
     } else {
       $('.ike').hide();
     }
-    if(randomPlayers == 'DeVaughn Akoon-Purcell'){
+    if(randomPlayers == 'Player: DeVaughn Akoon-Purcell'){
       $('.DeVaughn').show();
     } else {
       $('.DeVaughn').hide();
     }
-    if(randomPlayers == 'Carmelo Anthony'){
+    if(randomPlayers == 'Player: Carmelo Anthony'){
       $('.carmelo').show();
     } else {
       $('.carmelo').hide();
     }
-    if(randomPlayers == 'Ron Baker'){
+    if(randomPlayers == 'Player: Ron Baker'){
       $('.baker').show();
     } else {
       $('.baker').hide();
     }
-    if(randomPlayers == 'Jabari Bird'){
+    if(randomPlayers == 'Player: Jabari Bird'){
       $('.jabari').show();
     } else {
       $('.jabari').hide();
@@ -82,27 +82,27 @@ const players = []
   const playerName = () => {
     if(currentImgIndex == 0){
       const $li = $('<li>')
-      $li.append('Ike Anigbogu');
+      $li.append('Player: Ike Anigbogu');
       $('.players').append($li)
     }
     if(currentImgIndex == 1){
       const $li = $('<li>')
-      $li.append('DeVaughn Akoon-Purcell');
+      $li.append('Player: DeVaughn Akoon-Purcell');
       $('.players').append($li)
     }
     if(currentImgIndex == 2){
       const $li = $('<li>')
-      $li.append('Carmelo Anthony');
+      $li.append('Player: Carmelo Anthony');
       $('.players').append($li)
     }
     if(currentImgIndex == 3){
       const $li = $('<li>')
-      $li.append('Ron Baker');
+      $li.append('Player: Ron Baker');
       $('.players').append($li)
     }
     if(currentImgIndex == 4){
       const $li = $('<li>')
-      $li.append('Jabari Bird');
+      $li.append('Player: Jabari Bird');
       $('.players').append($li)
     }
 
@@ -111,20 +111,11 @@ const players = []
 
 $.ajax(
   {
-    url: 'https://www.balldontlie.io/api/v1/players?per_page=5',
+    url: 'https://www.balldontlie.io/api/v1/players?per_page=10',
     success: (data) => {
       for(let i = 0; i < data.data.length; i ++){
       if(data.data[i].team.full_name){
-
-        // const $li = $('<li>')
-        // $li.append(data.data[i].first_name)
-        // $('.name').append($li)
-
-        players.push(data.data[i].first_name + ' ' + data.data[i].last_name)
-        // players.push(data.data[i].last_name)
-
-        // $li.append(data.data[i].last_name)
-        // $('.name').append($li)
+        players.push('Player: ' + data.data[i].first_name + ' ' + data.data[i].last_name)
         }
       }
       // console.log(data.data);

@@ -1,5 +1,5 @@
 .generate {
-  height: 15em;
+  height: 20em;
   width: 10em;
   text-align: center;
   align-self: center;
@@ -22,17 +22,49 @@ img {
   height: 100%;
   width: 100%;
 }
+h3 {
+  text-align: center;
+}
+hr {
+  display: block;
+  border: .5px solid black;
+  width: 80%;
+}
 .next {
-  height: 5em;
-  width: 5em;
-  border-radius: 50%;
+  height: 8em;
+  width: 8em;
+  border-radius: 20%;
   border: 5px black solid;
   text-align: center;
 }
 .previous {
-  height: 5em;
-  width: 5em;
-  border-radius: 50%;
+  height: 8em;
+  width: 8em;
+  border-radius: 20%;
   border: 5px black solid;
   text-align: center;
+}
+.top {
+  display: flex;
+  justify-content: center;
+  /* border: 1px black solid; */
+}
+.middle {
+  display: flex;
+  justify-content: center;
+  /* border: 1px black solid; */
+}
+.name-display {
+  display: flex;
+  justify-content: center;
+  height: 2em;
+  /* border: 1px black solid; */
+}
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  /* border: 1px black solid; */
+}
+li {
+  font-family: 'Cute Font', cursive;
 }
