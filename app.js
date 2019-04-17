@@ -1,20 +1,10 @@
 $(() => {
 
-      $('.ike').hide();
-      $('.DeVaughn').hide();
-      $('.carmelo').hide();
-      $('.baker').hide();
-      $('.jabari').hide();
-      $('.nbaImage').hide();
-
 const players = []
-
-
 
   $('.generate').on('click', () => {
     $('ul').empty();
     const randomPlayers = players[Math.floor(Math.random() * players.length)];
-    // console.log(randomPlayers);
 
     const $li = $('<li>')
     $li.append(randomPlayers)
@@ -48,13 +38,12 @@ const players = []
       $('.jabari').hide();
     }
 
-
   })
 
   let currentImgIndex = 0;
   let currentNumOfImages = $('.player-picture').children().length - 1;
 
-
+//carousel - some code below is from Jerrica's lesson//
   $('.next').on('click', () => {
     $('ul').empty();
     $('.player-picture').children().eq(currentImgIndex).hide();
@@ -76,7 +65,6 @@ const players = []
     } else {
       currentImgIndex = currentNumOfImages
     }
-
     $('.player-picture').children().eq(currentImgIndex).show();
 
     playerName();
@@ -111,7 +99,7 @@ const players = []
 
   }
 
-
+//api//
 $.ajax(
   {
     url: 'https://www.balldontlie.io/api/v1/players?per_page=5',
@@ -124,4 +112,11 @@ $.ajax(
       // console.log(data.data);
     }
   })
+  //hidding pictures//
+  $('.ike').hide();
+  $('.DeVaughn').hide();
+  $('.carmelo').hide();
+  $('.baker').hide();
+  $('.jabari').hide();
+  $('.nbaImage').hide();
 })

@@ -65,6 +65,7 @@ hr {
 .buttons {
   display: flex;
   justify-content: space-around;
+  padding-top: 5%;
   /* border: 1px black solid; */
 }
 li {
@@ -91,5 +92,11 @@ body {
     width: 50%;
     font-size: 1em;
     /* border: 5px black solid; */
+  }
+  .buttons {
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+    /* border: 1px black solid; */
   }
 }
