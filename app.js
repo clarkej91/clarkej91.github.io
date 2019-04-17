@@ -5,6 +5,7 @@ $(() => {
       $('.carmelo').hide();
       $('.baker').hide();
       $('.jabari').hide();
+      $('.nbaImage').hide();
 
 const players = []
 
@@ -18,6 +19,8 @@ const players = []
     const $li = $('<li>')
     $li.append(randomPlayers)
     $('.players').append($li)
+
+    $('.nbaImage').hide();
 
     if(randomPlayers == 'Player: Ike Anigbogu'){
       $('.ike').show();
@@ -111,7 +114,7 @@ const players = []
 
 $.ajax(
   {
-    url: 'https://www.balldontlie.io/api/v1/players?per_page=10',
+    url: 'https://www.balldontlie.io/api/v1/players?per_page=5',
     success: (data) => {
       for(let i = 0; i < data.data.length; i ++){
       if(data.data[i].team.full_name){
@@ -120,6 +123,5 @@ $.ajax(
       }
       // console.log(data.data);
     }
-  }
-)
+  })
 })
